@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos de Clase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .accordion {
+            margin: 20px 0;
+        }
+        .accordion-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .accordion-header {
+            background-color: #f8f9fa;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .accordion-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            padding: 15px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Clase de Historia</h1>
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">El Mundo Feudal</div>
+            <div class="accordion-content">
+                <p><a href="https://www.youtube.com/watch?v=eaa5RC8vFnE" target="_blank">Presentación</a></p>
+               
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">Archivos PDF</div>
+            <div class="accordion-content">
+                <p><a href="https://drive.google.com/file/d/1QZirFnx9q7-PXDil-yP1XxjyXRiBhffo/view?usp=sharing" target="_blank">Material teórico</a></p>
+                <p><a href="https://drive.google.com/file/d/1XmhgflINitICQ0DiKYj3mVhwiBsdqCy-/view?usp=sharing" target="_blank">Práctico</a></p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">Videos</div>
+            <div class="accordion-content">
+                <p><a href="https://www.youtube.com/watch?v=K7qMcfWnsE0&t=10s" target="_blank">Tutorial</a></p>
+                  <p><a href="https://www.youtube.com/watch?v=DjdFLJT5lhY" target="_blank">La Edad Media en 10 minutos
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentNode;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
